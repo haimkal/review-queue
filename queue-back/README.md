@@ -233,6 +233,6 @@ Out of scope for the timebox:
 
 ## ⚠️ Error Handling
 
-Validation errors return 422 responses.
-Invalid review actions return 400 responses.
-Missing resources return 404.
+- Validation errors return 422 responses.
+- Invalid review actions return 400 responses.
+- Missing resources return 404.
