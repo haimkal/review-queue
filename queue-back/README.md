@@ -203,13 +203,24 @@ Optimized for:
 - Separation of concerns
 - Testability
 
-Intentionally not implemented:
+Out of scope for the timebox:
 
-- Authentication
-- Role-based authorization
+- Authentication & role enforcement
 - Pagination
-- Background jobs
-- Production-level logging
+- Background processing
+- Production-level logging & monitoring
+
+## 🔑 Key Decisions
+
+- **Data model:** a single `items` table with `state`, `review_note`, `reviewed_at`, `risk_score`, and `flags` to keep the domain minimal and easy to extend.
+- **API design:** REST-style endpoints (`POST /items`, `GET /items`, `POST /items/{id}/review`) to keep the flow explicit and predictable for the UI.
+- **Persistence:** SQLite for zero-config local setup and fast iteration within the timebox.
+
+## ✅ Assumptions
+
+- No authentication is required for this assignment; “User/Reviewer mode” is a UI-level toggle.
+- Newly created items start in `pending`.
+- The moderation heuristic is intentionally simple and deterministic for easy discussion/modification in the follow-up interview.
 
 ---
 
