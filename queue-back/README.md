@@ -51,7 +51,7 @@ Update your `.env` file:
 
 ```
 DB_CONNECTION=sqlite
-DB_DATABASE=/absolute/path/to/backend/database/database.sqlite
+DB_DATABASE=database/database.sqlite
 ```
 
 Run migrations:
